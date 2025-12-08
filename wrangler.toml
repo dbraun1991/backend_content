@@ -1,0 +1,10 @@
+name = "backendcontent"
+main = "src/backend.js"
+compatibility_date = "2024-01-01"
+
+kv_namespaces = [
+  { binding = "DEMO_LOGS", id = "f869ab51bf3e421489688cc19fe84ede" }
+]
+
+[vars]
+ALLOWED_ORIGINS = "https://dbraun1991.github.io,https://dbraun1991.github.io/diffcomparison,https://dbraun1991.github.io/diffcomparison/main.html,file://"
