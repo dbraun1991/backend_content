@@ -395,7 +395,7 @@ async function renderDashboard(env) {
         <h2 style="color: #FFFFFF; margin-bottom: 10px;">No Tracking Logs Yet</h2>
         <p style="font-size: 16px; max-width: 500px; margin: 0 auto; line-height: 1.6;">
           Logs will appear here once visitors access the portfolio website. 
-          Each visit, page load, and navigation click will be tracked automatically.
+          Each navigation click will be tracked automatically.
         </p>
         <div style="margin-top: 30px; padding: 20px; background: rgba(30, 50, 120, 0.3); border-radius: 8px; max-width: 500px; margin: 30px auto 0;">
           <p style="margin: 0; font-size: 14px;">

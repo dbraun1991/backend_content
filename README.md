@@ -2,6 +2,9 @@
 
 A lightweight tracking and analytics backend built on Cloudflare Workers with KV storage. Provides pixel tracking, custom event logging, and a simple dashboard for monitoring user interactions.
 
+[Link to the dashboard](https://backendcontent.d-braun1991.workers.dev/dashboard)
+
+
 ## Architecture
 
 **Runtime:** Cloudflare Workers (Edge Computing)  
