@@ -57,6 +57,26 @@ function getCorsHeaders(request, env) {
 }
 
 // ---------------------------
+// Berlin Timestamp Function
+// ---------------------------
+function getBerlinTimestamp() {
+  const date = new Date();
+
+  const formatter = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Europe/Berlin",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    timeZoneName: "short"
+  });
+
+  return formatter.format(date).replace(",", "");
+}
+
+// ---------------------------
 // 1. Pixel endpoint
 // ---------------------------
 async function handlePixel(request, env) {
@@ -69,7 +89,7 @@ async function handlePixel(request, env) {
 
   const logEntry = {
     type: "pixel",
-    time: new Date().toISOString(),
+    time: getBerlinTimestamp(),
     ip: request.headers.get("CF-Connecting-IP"),
     ua: request.headers.get("User-Agent"),
     referer: request.headers.get("Referer"),
@@ -115,7 +135,7 @@ async function handleLog(request, env) {
 
   const logEntry = {
     type: "js",
-    time: new Date().toISOString(),
+    time: getBerlinTimestamp(),
     ip: request.headers.get("CF-Connecting-IP"),
     ua: request.headers.get("User-Agent"),
     referer: request.headers.get("Referer"),
