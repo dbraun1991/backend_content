@@ -453,7 +453,6 @@ async function renderDashboard(env) {
         <div class="log-detail"><strong>Session:</strong> <span class="session-id">${data.session || 'N/A'}</span></div>
         ${data.action ? `<div class="log-detail"><strong>Action:</strong> <span class="action-tag">${data.action}</span></div>` : ''}
         ${data.section ? `<div class="log-detail"><strong>Section:</strong> <span class="section-tag">${data.section}</span></div>` : ''}
-        <div class="log-detail"><strong>IP:</strong> ${data.ip}</div>
         <div class="log-detail"><strong>User-Agent:</strong> ${data.ua}</div>
         ${data.referer ? `<div class="log-detail"><strong>Referer:</strong> ${data.referer}</div>` : ''}
         ${data.body ? `<pre>${JSON.stringify(data.body, null, 2)}</pre>` : ""}
